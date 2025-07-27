@@ -13,4 +13,4 @@ const numberOfSquares = document.querySelectorAll(".square").length
 const target = Array.from(elements).find(el => el.textContent.trim() === "A game You Know");
 console.log(target);
 
-// first exercise
+// first exercises
