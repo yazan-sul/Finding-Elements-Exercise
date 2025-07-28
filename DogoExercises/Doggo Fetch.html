@@ -125,8 +125,14 @@
     // then parse the response as a JSON object,
     // finally return the "message" property of its body
     async function fetchMessage(url) {
-        
+    
+        const response = await fetch(url);
+        const jsonObj = await response.json();
+        const { message } = jsonObj;
+        console.log("Hound sub-breeds:", message); // Logs the array
+    
     }
+    fetchMessage("https://dog.ceo/api/breed/hound/list");
 
 
     // Function to add the multiple-choice buttons to the page
